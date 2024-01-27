@@ -12,7 +12,7 @@ const props = defineProps({
 <template>
     <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">
         <div class="overflow-hidden border border-gray-200 rounded-xl">
-            <RouterLink to="/details">
+            <RouterLink to="/product">
                 <div class="m-4 overflow-hidden rounded-xl">
                     <img :alt="title" class="block w-full h-auto" :src="'/src/assets/img/' + image" />
                 </div>
