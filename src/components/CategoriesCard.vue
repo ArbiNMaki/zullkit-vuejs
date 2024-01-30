@@ -2,9 +2,9 @@
 import { RouterLink } from 'vue-router';
 
 const props = defineProps({
-    title: String,
-    image: String,
-    count: Number
+    name: String,
+    thumbnails: String,
+    products_count: Number
 });
 
 </script>
@@ -14,18 +14,18 @@ const props = defineProps({
         <div class="overflow-hidden border border-gray-200 rounded-xl">
             <RouterLink to="/product">
                 <div class="m-4 overflow-hidden rounded-xl">
-                    <img :alt="title" class="block w-full h-auto" :src="'/src/assets/img/' + image" />
+                    <img :alt="title" class="block w-full h-auto" :src="thumbnails" />
                 </div>
             </RouterLink>
 
             <header class="px-4 mb-4 leading-tight">
                 <h1 class="text-lg">
                     <RouterLink class="font-semibold text-black no-underline hover:underline" to="#">
-                        {{ title }}
+                        {{ name }}
                     </RouterLink>
                 </h1>
                 <span class="block text-sm font-light text-gray-500 no-underline">
-                    {{ count }} items
+                    {{ products_count }} items
                 </span>
             </header>
         </div>
